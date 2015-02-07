@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f0096a3c-9df1-423f-8576-0b2a222f7bf1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/ImageService/SaveImage.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SaveImage.xsd" MetadataType="Schema" ID="31e8a87e-956a-4c03-9b1c-394dffae18d8" SourceId="1" SourceUrl="http://localhost/ImageService/SaveImage.svc?xsd=xsd1" />
+    <MetadataFile FileName="SaveImage.wsdl" MetadataType="Wsdl" ID="0761e121-5b2e-4f97-898d-ac2ce27f54d7" SourceId="1" SourceUrl="http://localhost/ImageService/SaveImage.svc?wsdl" />
+    <MetadataFile FileName="SaveImage1.xsd" MetadataType="Schema" ID="bd5f1e4f-8db6-469d-abdf-09ee67a59f25" SourceId="1" SourceUrl="http://localhost/ImageService/SaveImage.svc?xsd=xsd2" />
+    <MetadataFile FileName="SaveImage2.xsd" MetadataType="Schema" ID="54f5cf0a-ef2e-4377-a967-224fe7496649" SourceId="1" SourceUrl="http://localhost/ImageService/SaveImage.svc?xsd=xsd0" />
+    <MetadataFile FileName="SaveImage.disco" MetadataType="Disco" ID="2704fb98-f61f-4654-b8b2-1e043e850c07" SourceId="1" SourceUrl="http://localhost/ImageService/SaveImage.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

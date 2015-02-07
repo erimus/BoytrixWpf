@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Boytrix.Data.Services.WCF.BoytrixModules.OrderService.OrderService" CodeBehind="OrderService.svc.cs" %>

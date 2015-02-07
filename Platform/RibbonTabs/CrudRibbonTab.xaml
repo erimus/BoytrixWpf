@@ -1,0 +1,43 @@
+﻿<ribbon:RibbonTab x:Class="Boytrix.UI.WPF.Libraries.Platform.RibbonTabs.CrudRibbonTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ribbon="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+             xmlns:converters="clr-namespace:Boytrix.UI.WPF.Libraries.Platform.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+            Header="Home" IsSelected="{Binding HomeTabIsSelectedxxxxxxxx}">
+    
+    <ribbon:RibbonTab.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Boytrix.UI.WPF.Libraries.Platform;component/Styles/ControlStyle.xaml"/>
+                <ResourceDictionary>
+                    <converters:BoolToVisibilityConverter x:Key="BoolToVis"/>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries></ResourceDictionary>
+    </ribbon:RibbonTab.Resources>
+        <ribbon:RibbonGroup Header="Group S1">
+
+
+            <ribbon:RibbonButton Command="{Binding NewCollection}"  Visibility="{Binding ButtonVisibilty.IsAddVisible,Converter={StaticResource BoolToVis}}"  ToolTip="Create a new item" LargeImageSource="../Resources/Images/Basics/plain/add.png"
+						CommandParameter="{Binding Name, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContentControl}}}" />
+
+            <ribbon:RibbonButton Command="{Binding EditCollection}"  Visibility="{Binding ButtonVisibilty.IsEditVisible,Converter={StaticResource BoolToVis}}" ToolTip="Edit the current Item" LargeImageSource="../Resources/Images/Basics/shadow/contract.png" />
+            <ribbon:RibbonButton Command="{Binding SaveCollection}"  Visibility="{Binding ButtonVisibilty.IsSaveVisible, Converter={StaticResource BoolToVis}}" ToolTip="Save the current Item" LargeImageSource="../Resources/Images/Basics/plain/disk_blue.png" />
+            <ribbon:RibbonButton Command="{Binding DeleteCollection}"  Visibility="{Binding ButtonVisibilty.IsDeleteVisible,Converter={StaticResource BoolToVis}}" ToolTip="Delete the current Item" LargeImageSource="../Resources/Images/Basics/plain/delete.png" />
+            <ribbon:RibbonButton Visibility="{Binding ButtonVisibilty.IsRefreshVisible,Converter={StaticResource BoolToVis}}"  Command="{Binding RefreshCollectionCommand}" ToolTip="Refresh data" LargeImageSource="../Resources/Images/Basics/plain/Refresh.png" />
+            <ribbon:RibbonButton Command="{Binding CommitCollection}"  Visibility="{Binding ButtonVisibilty.IsCommitVisible, Converter={StaticResource BoolToVis}}" ToolTip="Commit changes" LargeImageSource="../Resources/Images/Business and data/plain/data.png" />
+            <ribbon:RibbonButton Command="{Binding ReviewCollection}"  Visibility="{Binding ButtonVisibilty.IsReviewVisible, Converter={StaticResource BoolToVis}}" ToolTip="Review changes" LargeImageSource="../Resources/Images/Business and data/plain/note_view.png" />
+
+            <ribbon:RibbonButton Command="{Binding ViewRecordCommand}"   Visibility="{Binding ButtonVisibilty.IsViewVisible,Converter={StaticResource BoolToVis}}"  ToolTip="View Details" LargeImageSource="../Resources/Images/basics/plain/view.png" />
+
+
+        </ribbon:RibbonGroup>
+
+        <ribbon:RibbonGroup Header="Exit">
+            <ribbon:RibbonButton Command="{Binding ExitViewCommand}"  Visibility="{Binding IsExitVisible,Converter={StaticResource BoolToVis}}" ToolTip="Exit" LargeImageSource="../Resources/Images/Basics/plain/exit.png" />
+
+        </ribbon:RibbonGroup>
+</ribbon:RibbonTab>

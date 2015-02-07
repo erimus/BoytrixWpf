@@ -1,0 +1,6 @@
+﻿namespace DataAccess
+{
+    class StockDal
+    {
+    }
+}

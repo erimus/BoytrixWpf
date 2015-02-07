@@ -1,0 +1,125 @@
+﻿<UserControl x:Class="Boytrix.UI.WPF.Libraries.Platform.Views.AddUser"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ns="clr-namespace:Boytrix.UI.WPF.Libraries.Platform.Converters"
+             mc:Ignorable="d" 
+             >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Boytrix.UI.WPF.Libraries.Platform;component/Styles/ControlStyle.xaml"/>
+                <ResourceDictionary>
+                    <ns:NotConverter x:Key="NotConverter"/>
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="LabelTextBlockStyle"
+			   TargetType="TextBlock">
+            <Setter Property="FontWeight"
+					Value="Bold" />
+            <Setter Property="HorizontalAlignment"
+					Value="Right" />
+            <Setter Property="Margin"
+					Value="0,0,10,0" />
+            <Setter Property="VerticalAlignment"
+					Value="Center" />
+        </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid IsEnabled="{Binding IsEnabled}" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150*"/>
+            <RowDefinition Height="111*"/>
+            <RowDefinition Height="276*"/>
+            <RowDefinition Height="14*"/>
+        </Grid.RowDefinitions>
+
+
+        <DataGrid AutoGenerateColumns="False" Margin="3" Grid.Row="2"  Name="MyDataGrid" ItemsSource="{Binding Path=UserGroups}" 
+              CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Width="30">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <!--<DataGridCheckBoxColumn Binding="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}" Width="50" >
+                    
+                    <DataGridCheckBoxColumn.HeaderTemplate>
+                        <DataTemplate x:Name="dtAllChkBx">
+                            <CheckBox Width="30"  Name="cbxAll" Content="All" IsChecked="{Binding Path=DataContext.AllSelected,RelativeSource={RelativeSource AncestorType=DataGrid}}" HorizontalAlignment="Center"/>
+                        </DataTemplate>
+                    </DataGridCheckBoxColumn.HeaderTemplate>
+                </DataGridCheckBoxColumn>-->
+                <DataGridTemplateColumn Header="Name" Width="100*" IsReadOnly="{Binding IsReadOnly}">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Name}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Description" Width="150*" IsReadOnly="True">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Description}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <GroupBox Margin="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0"   >
+            <GroupBox.Header>
+                <TextBlock Text="User Details "/>
+            </GroupBox.Header>
+            <Canvas Height="144" Width="268" >
+                <Grid >
+                    <CheckBox Name="chkIsDActive" Height="17" Width="81" TabIndex="3" Margin="0,0,164,2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black" IsThreeState="False" IsChecked="{Binding SelectedItem.IsActive}">Active User</CheckBox>
+                    <TextBox Name="txtFName" Height="20" Width="211" TabIndex="2" Margin="0,0,34,25" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap"  Text="{Binding SelectedItem.Password,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=true, NotifyOnValidationError=true}"></TextBox>
+                    <Label Name="label2" Height="22" Width="63" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="3" Margin="0,0,247,20" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black">Password</Label>
+                    <TextBox Name="txtUName" Height="20" Width="211" TabIndex="1" Margin="0,10,34,52" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" Text="{Binding SelectedItem.FullName,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" ></TextBox>
+                    <Label Name="label1" Height="22" Width="69" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="1" Margin="0,0,241,47" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black">Full Name</Label>
+                    <TextBox Name="txtUNameb" Height="20" Width="211" TabIndex="0" Margin="0,10,34,75" HorizontalAlignment="Right" VerticalAlignment="Bottom" TextWrapping="Wrap" Text="{Binding SelectedItem.Login,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" ></TextBox>
+                    <Label Name="label1j" Height="22" Width="69" FontSize="11" FontFamily="Microsoft Sans Serif" TabIndex="1" Margin="0,0,241,67" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black">User Name</Label>
+
+                </Grid>
+                          </Canvas>
+        </GroupBox>
+        <GroupBox Margin="2" VerticalAlignment="Stretch" Grid.Row="1"  >
+            <GroupBox.Header>
+                <TextBlock Text="User\'s Group"/>
+            </GroupBox.Header>
+            <Canvas Height="78" Width="268" >
+                <RadioButton Name="RbtnAdmin" Height="17" Width="90" TabIndex="5" Margin="4,39,244,358" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black" IsThreeState="False" 
+                             IsChecked="{Binding SelectedItem.IsAdmin,Mode=TwoWay}"
+
+                             >Administrators</RadioButton>
+                <RadioButton IsChecked="{Binding IsStandard,Mode=TwoWay}" Name="RbtnUser" Height="17" Width="93" TabIndex="4" Margin="4,16,241,381" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="Black" >Standard User</RadioButton>
+            </Canvas>
+        </GroupBox>
+        <Grid x:Name="ErrorsSummaryContainer"
+						  Grid.Row="0"
+						  Visibility="Collapsed"
+						  Margin="0,10,10,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Plase correct the following errors before proceeding:"
+								   Foreground="Red"
+								   FontWeight="Bold" />
+            <TextBlock Grid.Row="1"
+								   Text="{Binding ValidationErrorsString}"
+								   Foreground="Red"
+								   Margin="0,5,0,0" />
+
+        </Grid>
+
+    </Grid>
+</UserControl>

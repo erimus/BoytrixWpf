@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="Boytrix.UI.WPF.Libraries.Platform.Navigators.InventoryNavigator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+               xmlns:fsc="clr-namespace:FsTaskButton;assembly=FsTaskButton"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <WrapPanel>
+            <fsc:TaskButton x:Name="NavButton1"
+                    Command="{Binding ShowInventoryView}" 
+                    IsChecked="{Binding IsChecked}"
+                    MinWidth="150" 
+                    Foreground="Black" 
+                    Image="../Resources/Images/Famsilk/icons/Package.png" 
+                  
+                    Text="Purchase Order Merge" 
+                    Margin="5,2,5,2" 
+                    Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" />
+
+            <fsc:TaskButton x:Name="NavButton3"
+                    Command="{Binding ShowInventoryView}" 
+                    IsChecked="{Binding IsChecked}"
+                    MinWidth="150" 
+                    Foreground="Black" 
+                    Image="../Resources/Images/Famsilk/icons/Package.png" 
+                  
+                    Text="Inventory Stock View" 
+                    Margin="5,2,5,2" 
+                    Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" />
+
+            <fsc:TaskButton x:Name="NavButton4"
+                    Command="{Binding ShowInventoryView}" 
+                    IsChecked="{Binding IsChecked}"
+                    MinWidth="150" 
+                    Foreground="Black" 
+                    Image="../Resources/Images/Famsilk/icons/Package.png" 
+                  
+                    Text="Inventory Stock View (Bulk)" 
+                    Margin="5,2,5,2" 
+                    Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" />
+
+            <fsc:TaskButton x:Name="NavButton5"
+                    Command="{Binding ShowInventoryView}" 
+                    IsChecked="{Binding IsChecked}"
+                    MinWidth="150" 
+                    Foreground="Black" 
+                    Image="../Resources/Images/Famsilk/icons/Package.png" 
+                  
+                    Text="Stock Adjustments" 
+                    Margin="5,2,5,2" 
+                    Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" />
+        </WrapPanel>
+    </Grid>
+</UserControl>

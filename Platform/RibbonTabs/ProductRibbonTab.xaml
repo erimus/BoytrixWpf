@@ -1,0 +1,15 @@
+﻿<ribbon:RibbonTab x:Class="Boytrix.UI.WPF.Libraries.Platform.RibbonTabs.ProductRibbonTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ribbon="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <ribbon:RibbonGroup Header="Group A1">
+        <ribbon:RibbonButton LargeImageSource="pack://application:,,,/Boytrix.UI.WPF.Libraries.Platform;component/Resources/Images/Business and data/plain/cabinet.png" Label="Button R1" />
+        <ribbon:RibbonButton SmallImageSource="pack://application:,,,/Boytrix.UI.WPF.Libraries.Platform;component/Resources/Images/Business and data/plain/cabinet.png" Label="Button R2" />
+        <ribbon:RibbonButton SmallImageSource="pack://application:,,,/Boytrix.UI.WPF.Libraries.Platform;component/Resources/Images/Business and data/plain/cabinet.png" Label="Button R3" />
+        <ribbon:RibbonButton SmallImageSource="pack://application:,,,/Boytrix.UI.WPF.Libraries.Platform;component/Resources/Images/Business and data/plain/cabinet.png" Label="Button R4" />
+    </ribbon:RibbonGroup>
+    </ribbon:RibbonTab>

@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{79443717-EF4A-4F45-93A2-3B3DCA7161EE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Boytrix.UI.Common.Utilities</RootNamespace>
+    <AssemblyName>Boytrix.UI.Common.Utilities</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Prism.Composition">
+      <HintPath>..\packages\Prism.Composition.5.0.0\lib\NET45\Microsoft.Practices.Prism.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity">
+      <HintPath>..\packages\Prism.Interactivity.5.0.0\lib\NET45\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm">
+      <HintPath>..\packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm.Desktop">
+      <HintPath>..\packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.Mvvm.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.PubSubEvents">
+      <HintPath>..\packages\Prism.PubSubEvents.1.0.0\lib\portable-sl4+wp7+windows8+net40\Microsoft.Practices.Prism.PubSubEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.SharedInterfaces">
+      <HintPath>..\packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.SharedInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.2\lib\portable-windows8+net40+sl5+windowsphone8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Behaviours\FileOpenBehavior.cs" />
+    <Compile Include="Classes\Attributes.cs" />
+    <Compile Include="Classes\Command.cs" />
+    <Compile Include="Classes\RibbonRegionAdapter.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Enums\FormEnums.cs" />
+    <Compile Include="Enums\SecurityEnums.cs" />
+    <Compile Include="Behaviours\FilesOpenedMessage.cs" />
+    <Compile Include="EventMessages\RefreshModeArgs.cs" />
+    <Compile Include="EventMessages\SundryClasses.cs" />
+    <Compile Include="RegionNames.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IView.cs" />
+    <Compile Include="Interfaces\IViewFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Basic\about.png" />
+    <Resource Include="Images\Basic\add.png" />
+    <Resource Include="Images\Basic\add2.png" />
+    <Resource Include="Images\Basic\arrow_down_blue.png" />
+    <Resource Include="Images\Basic\arrow_down_green.png" />
+    <Resource Include="Images\Basic\arrow_left_blue.png" />
+    <Resource Include="Images\Basic\arrow_left_green.png" />
+    <Resource Include="Images\Basic\arrow_right_blue.png" />
+    <Resource Include="Images\Basic\arrow_right_green.png" />
+    <Resource Include="Images\Basic\arrow_up_blue.png" />
+    <Resource Include="Images\Basic\arrow_up_green.png" />
+    <Resource Include="Images\Basic\bookmark.png" />
+    <Resource Include="Images\Basic\bookmarks.png" />
+    <Resource Include="Images\Basic\bookmarks_preferences.png" />
+    <Resource Include="Images\Basic\bookmark_add.png" />
+    <Resource Include="Images\Basic\bookmark_delete.png" />
+    <Resource Include="Images\Basic\bookmark_down.png" />
+    <Resource Include="Images\Basic\bookmark_new.png" />
+    <Resource Include="Images\Basic\bookmark_preferences.png" />
+    <Resource Include="Images\Basic\bookmark_up.png" />
+    <Resource Include="Images\Basic\check.png" />
+    <Resource Include="Images\Basic\check2.png" />
+    <Resource Include="Images\Basic\checks.png" />
+    <Resource Include="Images\Basic\clipboard.png" />
+    <Resource Include="Images\Basic\clipboard_empty.png" />
+    <Resource Include="Images\Basic\clipboard_next.png" />
+    <Resource Include="Images\Basic\clipboard_next_down.png" />
+    <Resource Include="Images\Basic\contract.png" />
+    <Resource Include="Images\Basic\copy.png" />
+    <Resource Include="Images\Basic\cut.png" />
+    <Resource Include="Images\Basic\delete.png" />
+    <Resource Include="Images\Basic\delete2.png" />
+    <Resource Include="Images\Basic\desktop.png" />
+    <Resource Include="Images\Basic\diskdrive.png" />
+    <Resource Include="Images\Basic\disks.png" />
+    <Resource Include="Images\Basic\disk_blue.png" />
+    <Resource Include="Images\Basic\disk_blue_error.png" />
+    <Resource Include="Images\Basic\disk_blue_information.png" />
+    <Resource Include="Images\Basic\disk_blue_ok.png" />
+    <Resource Include="Images\Basic\disk_blue_warning.png" />
+    <Resource Include="Images\Basic\disk_blue_window.png" />
+    <Resource Include="Images\Basic\disk_green.png" />
+    <Resource Include="Images\Basic\disk_yellow.png" />
+    <Resource Include="Images\Basic\document.png" />
+    <Resource Include="Images\Basic\documents.png" />
+    <Resource Include="Images\Basic\documents_gear.png" />
+    <Resource Include="Images\Basic\documents_new.png" />
+    <Resource Include="Images\Basic\documents_preferences.png" />
+    <Resource Include="Images\Basic\document_add.png" />
+    <Resource Include="Images\Basic\document_attachment.png" />
+    <Resource Include="Images\Basic\document_certificate.png" />
+    <Resource Include="Images\Basic\document_chart.png" />
+    <Resource Include="Images\Basic\document_check.png" />
+    <Resource Include="Images\Basic\document_connection.png" />
+    <Resource Include="Images\Basic\document_cup.png" />
+    <Resource Include="Images\Basic\document_delete.png" />
+    <Resource Include="Images\Basic\document_dirty.png" />
+    <Resource Include="Images\Basic\document_down.png" />
+    <Resource Include="Images\Basic\document_edit.png" />
+    <Resource Include="Images\Basic\document_error.png" />
+    <Resource Include="Images\Basic\document_exchange.png" />
+    <Resource Include="Images\Basic\document_find.png" />
+    <Resource Include="Images\Basic\document_gear.png" />
+    <Resource Include="Images\Basic\document_heart.png" />
+    <Resource Include="Images\Basic\document_info.png" />
+    <Resource Include="Images\Basic\document_into.png" />
+    <Resource Include="Images\Basic\document_lock.png" />
+    <Resource Include="Images\Basic\document_music.png" />
+    <Resource Include="Images\Basic\document_new.png" />
+    <Resource Include="Images\Basic\document_notebook.png" />
+    <Resource Include="Images\Basic\document_ok.png" />
+    <Resource Include="Images\Basic\document_out.png" />
+    <Resource Include="Images\Basic\document_pinned.png" />
+    <Resource Include="Images\Basic\document_plain.png" />
+    <Resource Include="Images\Basic\document_plain_new.png" />
+    <Resource Include="Images\Basic\document_preferences.png" />
+    <Resource Include="Images\Basic\document_pulse.png" />
+    <Resource Include="Images\Basic\document_refresh.png" />
+    <Resource Include="Images\Basic\document_stop.png" />
+    <Resource Include="Images\Basic\document_text.png" />
+    <Resource Include="Images\Basic\document_time.png" />
+    <Resource Include="Images\Basic\document_up.png" />
+    <Resource Include="Images\Basic\document_view.png" />
+    <Resource Include="Images\Basic\document_warning.png" />
+    <Resource Include="Images\Basic\document_zoom_in.png" />
+    <Resource Include="Images\Basic\document_zoom_out.png" />
+    <Resource Include="Images\Basic\door.png" />
+    <Resource Include="Images\Basic\door2.png" />
+    <Resource Include="Images\Basic\edit.png" />
+    <Resource Include="Images\Basic\error.png" />
+    <Resource Include="Images\Basic\exchange.png" />
+    <Resource Include="Images\Basic\exit.png" />
+    <Resource Include="Images\Basic\export1.png" />
+    <Resource Include="Images\Basic\export2.png" />
+    <Resource Include="Images\Basic\find.png" />
+    <Resource Include="Images\Basic\find_again.png" />
+    <Resource Include="Images\Basic\find_next.png" />
+    <Resource Include="Images\Basic\find_previous.png" />
+    <Resource Include="Images\Basic\find_selection.png" />
+    <Resource Include="Images\Basic\find_text.png" />
+    <Resource Include="Images\Basic\first_aid.png" />
+    <Resource Include="Images\Basic\first_aid_box.png" />
+    <Resource Include="Images\Basic\fit_to_size.png" />
+    <Resource Include="Images\Basic\flash.png" />
+    <Resource Include="Images\Basic\folder.png" />
+    <Resource Include="Images\Basic\folders.png" />
+    <Resource Include="Images\Basic\folder_add.png" />
+    <Resource Include="Images\Basic\folder_closed.png" />
+    <Resource Include="Images\Basic\folder_cubes.png" />
+    <Resource Include="Images\Basic\folder_delete.png" />
+    <Resource Include="Images\Basic\folder_document.png" />
+    <Resource Include="Images\Basic\folder_edit.png" />
+    <Resource Include="Images\Basic\folder_forbidden.png" />
+    <Resource Include="Images\Basic\folder_gear.png" />
+    <Resource Include="Images\Basic\folder_information.png" />
+    <Resource Include="Images\Basic\folder_into.png" />
+    <Resource Include="Images\Basic\folder_lock.png" />
+    <Resource Include="Images\Basic\folder_movie.png" />
+    <Resource Include="Images\Basic\folder_music.png" />
+    <Resource Include="Images\Basic\folder_network.png" />
+    <Resource Include="Images\Basic\folder_new.png" />
+    <Resource Include="Images\Basic\folder_ok.png" />
+    <Resource Include="Images\Basic\folder_out.png" />
+    <Resource Include="Images\Basic\folder_preferences.png" />
+    <Resource Include="Images\Basic\folder_refresh.png" />
+    <Resource Include="Images\Basic\folder_time.png" />
+    <Resource Include="Images\Basic\folder_up.png" />
+    <Resource Include="Images\Basic\folder_view.png" />
+    <Resource Include="Images\Basic\folder_warning.png" />
+    <Resource Include="Images\Basic\folder_window.png" />
+    <Resource Include="Images\Basic\font.png" />
+    <Resource Include="Images\Basic\forbidden.png" />
+    <Resource Include="Images\Basic\form_blue.png" />
+    <Resource Include="Images\Basic\form_green.png" />
+    <Resource Include="Images\Basic\form_red.png" />
+    <Resource Include="Images\Basic\form_yellow.png" />
+    <Resource Include="Images\Basic\garbage.png" />
+    <Resource Include="Images\Basic\garbage_empty.png" />
+    <Resource Include="Images\Basic\garbage_full.png" />
+    <Resource Include="Images\Basic\gear.png" />
+    <Resource Include="Images\Basic\gears.png" />
+    <Resource Include="Images\Basic\gears_pause.png" />
+    <Resource Include="Images\Basic\gears_preferences.png" />
+    <Resource Include="Images\Basic\gears_run.png" />
+    <Resource Include="Images\Basic\gears_stop.png" />
+    <Resource Include="Images\Basic\gears_view.png" />
+    <Resource Include="Images\Basic\gear_add.png" />
+    <Resource Include="Images\Basic\gear_connection.png" />
+    <Resource Include="Images\Basic\gear_delete.png" />
+    <Resource Include="Images\Basic\gear_error.png" />
+    <Resource Include="Images\Basic\gear_find.png" />
+    <Resource Include="Images\Basic\gear_forbidden.png" />
+    <Resource Include="Images\Basic\gear_information.png" />
+    <Resource Include="Images\Basic\gear_new.png" />
+    <Resource Include="Images\Basic\gear_ok.png" />
+    <Resource Include="Images\Basic\gear_pause.png" />
+    <Resource Include="Images\Basic\gear_preferences.png" />
+    <Resource Include="Images\Basic\gear_refresh.png" />
+    <Resource Include="Images\Basic\gear_replace.png" />
+    <Resource Include="Images\Basic\gear_run.png" />
+    <Resource Include="Images\Basic\gear_stop.png" />
+    <Resource Include="Images\Basic\gear_time.png" />
+    <Resource Include="Images\Basic\gear_view.png" />
+    <Resource Include="Images\Basic\gear_warning.png" />
+    <Resource Include="Images\Basic\harddisk.png" />
+    <Resource Include="Images\Basic\harddisk_add.png" />
+    <Resource Include="Images\Basic\harddisk_delete.png" />
+    <Resource Include="Images\Basic\harddisk_network.png" />
+    <Resource Include="Images\Basic\heart.png" />
+    <Resource Include="Images\Basic\heart_add.png" />
+    <Resource Include="Images\Basic\heart_broken.png" />
+    <Resource Include="Images\Basic\heart_delete.png" />
+    <Resource Include="Images\Basic\heart_new.png" />
+    <Resource Include="Images\Basic\heart_preferences.png" />
+    <Resource Include="Images\Basic\help.png" />
+    <Resource Include="Images\Basic\help2.png" />
+    <Resource Include="Images\Basic\help_earth.png" />
+    <Resource Include="Images\Basic\history.png" />
+    <Resource Include="Images\Basic\history2.png" />
+    <Resource Include="Images\Basic\history_add.png" />
+    <Resource Include="Images\Basic\history_delete.png" />
+    <Resource Include="Images\Basic\import1.png" />
+    <Resource Include="Images\Basic\import2.png" />
+    <Resource Include="Images\Basic\information.png" />
+    <Resource Include="Images\Basic\lifebelt.png" />
+    <Resource Include="Images\Basic\lightbulb.png" />
+    <Resource Include="Images\Basic\lightbulb_on.png" />
+    <Resource Include="Images\Basic\magic-wand.png" />
+    <Resource Include="Images\Basic\magic-wand2.png" />
+    <Resource Include="Images\Basic\media_beginning.png" />
+    <Resource Include="Images\Basic\media_end.png" />
+    <Resource Include="Images\Basic\media_fast_forward.png" />
+    <Resource Include="Images\Basic\media_pause.png" />
+    <Resource Include="Images\Basic\media_play.png" />
+    <Resource Include="Images\Basic\media_play_green.png" />
+    <Resource Include="Images\Basic\media_rewind.png" />
+    <Resource Include="Images\Basic\media_step_back.png" />
+    <Resource Include="Images\Basic\media_step_forward.png" />
+    <Resource Include="Images\Basic\media_stop.png" />
+    <Resource Include="Images\Basic\media_stop_red.png" />
+    <Resource Include="Images\Basic\music.png" />
+    <Resource Include="Images\Basic\navigate_beginning.png" />
+    <Resource Include="Images\Basic\navigate_check.png" />
+    <Resource Include="Images\Basic\navigate_close.png" />
+    <Resource Include="Images\Basic\navigate_cross.png" />
+    <Resource Include="Images\Basic\navigate_down.png" />
+    <Resource Include="Images\Basic\navigate_down2.png" />
+    <Resource Include="Images\Basic\navigate_end.png" />
+    <Resource Include="Images\Basic\navigate_left.png" />
+    <Resource Include="Images\Basic\navigate_left2.png" />
+    <Resource Include="Images\Basic\navigate_minus.png" />
+    <Resource Include="Images\Basic\navigate_open.png" />
+    <Resource Include="Images\Basic\navigate_plus.png" />
+    <Resource Include="Images\Basic\navigate_right.png" />
+    <Resource Include="Images\Basic\navigate_right2.png" />
+    <Resource Include="Images\Basic\navigate_up.png" />
+    <Resource Include="Images\Basic\navigate_up2.png" />
+    <Resource Include="Images\Basic\nav_down_blue.png" />
+    <Resource Include="Images\Basic\nav_down_green.png" />
+    <Resource Include="Images\Basic\nav_down_left_blue.png" />
+    <Resource Include="Images\Basic\nav_down_left_green.png" />
+    <Resource Include="Images\Basic\nav_down_left_red.png" />
+    <Resource Include="Images\Basic\nav_down_red.png" />
+    <Resource Include="Images\Basic\nav_down_right_blue.png" />
+    <Resource Include="Images\Basic\nav_down_right_green.png" />
+    <Resource Include="Images\Basic\nav_down_right_red.png" />
+    <Resource Include="Images\Basic\nav_left_blue.png" />
+    <Resource Include="Images\Basic\nav_left_green.png" />
+    <Resource Include="Images\Basic\nav_left_red.png" />
+    <Resource Include="Images\Basic\nav_plain_blue.png" />
+    <Resource Include="Images\Basic\nav_plain_green.png" />
+    <Resource Include="Images\Basic\nav_plain_red.png" />
+    <Resource Include="Images\Basic\nav_right_blue.png" />
+    <Resource Include="Images\Basic\nav_right_green.png" />
+    <Resource Include="Images\Basic\nav_right_red.png" />
+    <Resource Include="Images\Basic\nav_up_blue.png" />
+    <Resource Include="Images\Basic\nav_up_green.png" />
+    <Resource Include="Images\Basic\nav_up_left_blue.png" />
+    <Resource Include="Images\Basic\nav_up_left_green.png" />
+    <Resource Include="Images\Basic\nav_up_left_red.png" />
+    <Resource Include="Images\Basic\nav_up_red.png" />
+    <Resource Include="Images\Basic\nav_up_right_blue.png" />
+    <Resource Include="Images\Basic\nav_up_right_green.png" />
+    <Resource Include="Images\Basic\nav_up_right_red.png" />
+    <Resource Include="Images\Basic\notebook.png" />
+    <Resource Include="Images\Basic\notebook_preferences.png" />
+    <Resource Include="Images\Basic\paste.png" />
+    <Resource Include="Images\Basic\photo_portrait.png" />
+    <Resource Include="Images\Basic\photo_scenery.png" />
+    <Resource Include="Images\Basic\preferences.png" />
+    <Resource Include="Images\Basic\printer3.png" />
+    <Resource Include="Images\Basic\question_and_answer.png" />
+    <Resource Include="Images\Basic\recycle.png" />
+    <Resource Include="Images\Basic\recycle_preferences.png" />
+    <Resource Include="Images\Basic\redo.png" />
+    <Resource Include="Images\Basic\refresh.png" />
+    <Resource Include="Images\Basic\replace.png" />
+    <Resource Include="Images\Basic\replace2.png" />
+    <Resource Include="Images\Basic\save_as.png" />
+    <Resource Include="Images\Basic\scroll.png" />
+    <Resource Include="Images\Basic\scroll2.png" />
+    <Resource Include="Images\Basic\scroll_add.png" />
+    <Resource Include="Images\Basic\scroll_delete.png" />
+    <Resource Include="Images\Basic\scroll_error.png" />
+    <Resource Include="Images\Basic\scroll_information.png" />
+    <Resource Include="Images\Basic\scroll_ok.png" />
+    <Resource Include="Images\Basic\scroll_preferences.png" />
+    <Resource Include="Images\Basic\scroll_refresh.png" />
+    <Resource Include="Images\Basic\scroll_replace.png" />
+    <Resource Include="Images\Basic\scroll_run.png" />
+    <Resource Include="Images\Basic\scroll_stop.png" />
+    <Resource Include="Images\Basic\scroll_view.png" />
+    <Resource Include="Images\Basic\scroll_warning.png" />
+    <Resource Include="Images\Basic\selection.png" />
+    <Resource Include="Images\Basic\selection_delete.png" />
+    <Resource Include="Images\Basic\selection_down.png" />
+    <Resource Include="Images\Basic\selection_find.png" />
+    <Resource Include="Images\Basic\selection_recycle.png" />
+    <Resource Include="Images\Basic\selection_replace.png" />
+    <Resource Include="Images\Basic\selection_up.png" />
+    <Resource Include="Images\Basic\selection_view.png" />
+    <Resource Include="Images\Basic\signpost.png" />
+    <Resource Include="Images\Basic\star_blue.png" />
+    <Resource Include="Images\Basic\star_green.png" />
+    <Resource Include="Images\Basic\star_grey.png" />
+    <Resource Include="Images\Basic\star_red.png" />
+    <Resource Include="Images\Basic\star_yellow.png" />
+    <Resource Include="Images\Basic\star_yellow_add.png" />
+    <Resource Include="Images\Basic\star_yellow_delete.png" />
+    <Resource Include="Images\Basic\star_yellow_new.png" />
+    <Resource Include="Images\Basic\star_yellow_preferences.png" />
+    <Resource Include="Images\Basic\star_yellow_view.png" />
+    <Resource Include="Images\Basic\stop.png" />
+    <Resource Include="Images\Basic\text.png" />
+    <Resource Include="Images\Basic\text_align_center.png" />
+    <Resource Include="Images\Basic\text_align_justified.png" />
+    <Resource Include="Images\Basic\text_align_left.png" />
+    <Resource Include="Images\Basic\text_align_right.png" />
+    <Resource Include="Images\Basic\text_binary.png" />
+    <Resource Include="Images\Basic\text_bold.png" />
+    <Resource Include="Images\Basic\text_braille.png" />
+    <Resource Include="Images\Basic\text_find.png" />
+    <Resource Include="Images\Basic\text_italics.png" />
+    <Resource Include="Images\Basic\text_lock.png" />
+    <Resource Include="Images\Basic\text_loudspeaker.png" />
+    <Resource Include="Images\Basic\text_marked.png" />
+    <Resource Include="Images\Basic\text_normal.png" />
+    <Resource Include="Images\Basic\text_ok.png" />
+    <Resource Include="Images\Basic\text_rich.png" />
+    <Resource Include="Images\Basic\text_rich_colored.png" />
+    <Resource Include="Images\Basic\text_rich_marked.png" />
+    <Resource Include="Images\Basic\text_tree.png" />
+    <Resource Include="Images\Basic\text_underlined.png" />
+    <Resource Include="Images\Basic\text_view.png" />
+    <Resource Include="Images\Basic\transform.png" />
+    <Resource Include="Images\Basic\transform2.png" />
+    <Resource Include="Images\Basic\undo.png" />
+    <Resource Include="Images\Basic\unknown.png" />
+    <Resource Include="Images\Basic\view.png" />
+    <Resource Include="Images\Basic\view_1_1.png" />
+    <Resource Include="Images\Basic\view_next.png" />
+    <Resource Include="Images\Basic\view_previous.png" />
+    <Resource Include="Images\Basic\warning.png" />
+    <Resource Include="Images\Basic\window.png" />
+    <Resource Include="Images\Basic\windows.png" />
+    <Resource Include="Images\Basic\window_add.png" />
+    <Resource Include="Images\Basic\window_colors.png" />
+    <Resource Include="Images\Basic\window_delete.png" />
+    <Resource Include="Images\Basic\window_dialog.png" />
+    <Resource Include="Images\Basic\window_earth.png" />
+    <Resource Include="Images\Basic\window_edit.png" />
+    <Resource Include="Images\Basic\window_environment.png" />
+    <Resource Include="Images\Basic\window_gear.png" />
+    <Resource Include="Images\Basic\window_information.png" />
+    <Resource Include="Images\Basic\window_new.png" />
+    <Resource Include="Images\Basic\window_preferences.png" />
+    <Resource Include="Images\Basic\window_sidebar.png" />
+    <Resource Include="Images\Basic\window_split_hor.png" />
+    <Resource Include="Images\Basic\window_split_ver.png" />
+    <Resource Include="Images\Basic\window_star.png" />
+    <Resource Include="Images\Basic\window_time.png" />
+    <Resource Include="Images\Basic\window_view.png" />
+    <Resource Include="Images\Basic\window_warning.png" />
+    <Resource Include="Images\Basic\zoom_in.png" />
+    <Resource Include="Images\Basic\zoom_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{1DA1D871-10CB-40EE-85D2-3671EA306721}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

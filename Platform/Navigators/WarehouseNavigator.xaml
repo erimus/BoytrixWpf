@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="Boytrix.UI.WPF.Libraries.Platform.Navigators.WarehouseNavigator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+               xmlns:fsc="clr-namespace:FsTaskButton;assembly=FsTaskButton"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Styles/ControlStyle.xaml"/>
+                <ResourceDictionary>
+                    <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <WrapPanel>
+            <fsc:TaskButton x:Name="NavButton1"
+                    Command="{Binding ShowWarehouseManagementView}" 
+                    IsChecked="{Binding IsChecked}"
+                    MinWidth="150" 
+                    Foreground="Black" 
+                    Image="../Resources/Images/Famsilk/icons/arrow_out.png" 
+                  
+                    Text="Warehouse Management" 
+                    Margin="5,2,5,2" 
+                    Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" />
+            <fsc:TaskButton x:Name="NavButton2"
+                    Command="{Binding ShowWarehouseStockSyncView}" 
+                    IsChecked="{Binding IsChecked}"
+                    MinWidth="150" 
+                    Foreground="Black" 
+                    Image="../Resources/Images/Famsilk/icons/arrow_out.png" 
+                  
+                    Text="Sync Inventory Stock (from 3PL Warehouse)" 
+                    Margin="5,2,5,2" 
+                    Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" />
+            <fsc:TaskButton x:Name="NavButton3"
+                    Command="{Binding ShowWarehousePreadviceView}" 
+                    IsChecked="{Binding IsChecked}"
+                    MinWidth="150" 
+                    Foreground="Black" 
+                    Image="../Resources/Images/Famsilk/icons/arrow_out.png" 
+                  
+                    Text="Send Pre-Advice File to 3PL Warehouse" 
+                    Margin="5,2,5,2" 
+                    Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" />
+            <fsc:TaskButton x:Name="NavButton4"
+                    Command="{Binding ShowInventoryView}" 
+                    IsChecked="{Binding IsChecked}"
+                    MinWidth="150" 
+                    Foreground="Black" 
+                    Image="../Resources/Images/Famsilk/icons/arrow_out.png" 
+                  
+                    Text="Get Goods Received Info From Warehouse" 
+                    Margin="5,2,5,2" 
+                    Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" />
+
+            <fsc:TaskButton x:Name="NavButton7"
+                    Command="{Binding ShowInventoryView}" 
+                    IsChecked="{Binding IsChecked}"
+                    MinWidth="150" 
+                    Foreground="Black" 
+                    Image="../Resources/Images/Famsilk/icons/arrow_out.png" 
+                  
+                    Text="Get Customer Returns Info From Warehouse" 
+                    Margin="5,2,5,2" 
+                    Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" />
+
+            <fsc:TaskButton x:Name="NavButton5"
+                    Command="{Binding ShowInventoryView}" 
+                    IsChecked="{Binding IsChecked}"
+                    MinWidth="150" 
+                    Foreground="Black" 
+                    Image="../Resources/Images/Famsilk/icons/arrow_out.png" 
+                  
+                    Text="Get Stock Adjustments Info From Warehouse" 
+                    Margin="5,2,5,2" 
+                    Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" />
+
+            <fsc:TaskButton x:Name="NavButton6"
+                    Command="{Binding ShowInventoryView}" 
+                    IsChecked="{Binding IsChecked}"
+                    MinWidth="150" 
+                    Foreground="Black" 
+                    Image="../Resources/Images/Famsilk/icons/arrow_out.png" 
+                  
+                    Text="Export Shipments to Warehouses" 
+                    Margin="5,2,5,2" 
+                    Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" />
+            <fsc:TaskButton x:Name="NavButton8"
+                    Command="{Binding ShowInventoryView}" 
+                    IsChecked="{Binding IsChecked}"
+                    MinWidth="150" 
+                    Foreground="Black" 
+                    Image="../Resources/Images/Famsilk/icons/arrow_out.png" 
+                  
+                    Text="Export Product Info to Warehouses" 
+                    Margin="5,2,5,2" 
+                    Background="{Binding Path=Background, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}" />
+        </WrapPanel>
+    </Grid>
+</UserControl>

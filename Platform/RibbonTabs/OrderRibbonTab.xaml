@@ -1,0 +1,35 @@
+﻿<ribbon:RibbonTab x:Class="Boytrix.UI.WPF.Libraries.Platform.RibbonTabs.OrderRibbonTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ribbon="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             Header="Open Order" IsSelected="{Binding OpenOrderTabIsSelected}">
+                  
+                  >
+        <ribbon:RibbonGroup Header="Open Orders">
+
+            <ribbon:RibbonComboBox SmallImageSource="../Resources/Images/Business and data/plain/cabinet.png" Label="SearchBy " />
+            <ribbon:RibbonComboBox SmallImageSource="../Resources/Images/Business and data/plain/cabinet.png" Label="Exported "  />
+            <ribbon:RibbonComboBox SmallImageSource="../Resources/Images/Business and data/plain/cabinet.png" Label="Allocated" />
+            <ribbon:RibbonComboBox SmallImageSource="../Resources/Images/Business and data/plain/cabinet.png" Label="Shipping Method"  />
+        </ribbon:RibbonGroup>
+
+        <ribbon:RibbonGroup Header="Date">
+
+            <DatePicker HorizontalAlignment="Left"  Margin="0" VerticalAlignment="Top" Height="24"/>
+            <DatePicker HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Height="24"/>
+            <ribbon:RibbonComboBox SmallImageSource="../Resources/Images/Business and data/plain/cabinet.png" Label="Date Type"  />
+        </ribbon:RibbonGroup>
+
+        <ribbon:RibbonGroup Header="Shipment">
+            <ribbon:RibbonComboBox SmallImageSource="../Resources/Images/Business and data/plain/businessman_view.png" Label="Warehouse" />
+            <ribbon:RibbonCheckBox SmallImageSource="../Resources/Images/Business and data/plain/table_selection_all.png" Label="Select All"  />
+            <ribbon:RibbonButton SmallImageSource="../Resources/Images/Business and data/plain/note_new.png" Label="Command Order List"  />
+            <ribbon:RibbonButton SmallImageSource="../Resources/Images/Business and data/plain/data_delete.png" Label="Remove"  />
+            <ribbon:RibbonButton SmallImageSource="../Resources/Images/Business and data/plain/cabinet.png" Label="Export Order Details"  />
+        </ribbon:RibbonGroup>
+
+</ribbon:RibbonTab >
