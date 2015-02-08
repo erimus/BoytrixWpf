@@ -50,14 +50,14 @@
         <DatePicker HorizontalAlignment="Left" Margin="0" VerticalAlignment="Top" Height="24" Visibility="{Binding SearchContext.ControlVisibilty.IsDateVisible, Converter={StaticResource BoolToVisibilityConverter}}" />
         <ribbon:RibbonComboBox SmallImageSource="pack://application:,,,/Boytrix.UI.WPF.Libraries.Platform;component/Resources/Images/Business and data/plain/cabinet.png" Label="Date Type" Visibility="{Binding SearchContext.ControlVisibilty.IsDateVisible, Converter={StaticResource BoolToVisibilityConverter}}" >
             <ribbon:RibbonGallery SelectedItem="{Binding ByDateSelectedItem}" >
-                <ribbon:RibbonGalleryCategory ItemsSource="{Binding ByDate}"  />
+                <ribbon:RibbonGalleryCategory ItemsSource="{Binding ByDate}"  DisplayMemberPath="Name" />
             </ribbon:RibbonGallery>
         </ribbon:RibbonComboBox>
         </ribbon:RibbonGroup>
 
         <ribbon:RibbonGroup Header="Shipment">
         <ribbon:RibbonComboBox SmallImageSource="pack://application:,,,/Boytrix.UI.WPF.Libraries.Platform;component/Resources/Images/Business and data/plain/businessman_view.png" Label="Warehouse" >
-            <ribbon:RibbonGallery SelectedItem="{Binding ByDateSelectedItem}" >
+            <ribbon:RibbonGallery SelectedItem="{Binding WarehouseSelectedItem}" >
                 <ribbon:RibbonGalleryCategory ItemsSource="{Binding Warehouse}"  />
             </ribbon:RibbonGallery>
         </ribbon:RibbonComboBox>
